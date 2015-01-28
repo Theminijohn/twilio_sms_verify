@@ -36,7 +36,7 @@ private
 
   def generate_phone_verification_code
     begin
-     verification_code = SecureRandom.hex(3)
+     verification_code = rand(999999).to_s.center(6, rand(5).to_s).to_i
     end while self.class.exists?(phone_verification_code: verification_code)
 
     verification_code

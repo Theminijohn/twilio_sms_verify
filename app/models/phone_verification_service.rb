@@ -21,7 +21,7 @@ private
   end
 
   def twilio_client
-    @twilio ||= Twilio::REST::Client.new
+    @twilio ||= Twilio::REST::Client.new Settings.twilio.account_sid, Settings.twilio.auth_token
   end
 
   def send_sms
