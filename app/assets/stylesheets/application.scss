@@ -1,5 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Exo+2:400,700);
+
 $body-bg:                    #fff;
-$font-family-sans-serif:     'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-sans-serif:     'Exo 2', sans-serif;
 $navbar-height:              45px;
 $navbar-default-bg:          white;
 // $navbar-default-brand-color: #78b23f ;
@@ -18,6 +20,7 @@ $container-large-desktop:  ((980px + $grid-gutter-width));
 @import 'ionicons';
 
 @import 'devise/*';
+@import 'home';
 
 
 body {

@@ -1,0 +1,16 @@
+.VerificationStatus {
+  .Icon {
+    i {
+      font-size: 60px;
+    }
+    i.verified {
+      color: rgba(46, 204, 113,.7)
+    }
+    i.unverified {
+      color: rgba(231, 76, 60,.7)
+    }
+  }
+  .Status {
+    font-size: 50px;
+  }
+}

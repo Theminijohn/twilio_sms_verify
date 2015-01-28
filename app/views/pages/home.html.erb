@@ -1,11 +1,40 @@
-<div class="jumbotron text-center">
-  <h1>Welcome to my app!</h1>
-  <% if user_signed_in? %>
-    # do something
-  <% else %>
+<% if user_signed_in? %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="VerificationStatus text-center">
+        
+        <% if current_user.phone_verified %>
+          <div class="Icon">
+            <i class="ion-checkmark-circled verified"></i>
+          </div>
+
+          <div class="Status">
+            Verified
+          </div>
+        <% else %>
+          <div class="Icon">
+            <i class="ion-close-round unverified"></i>
+          </div>
+
+          <div class="Status">
+            Unverified
+          </div>
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="jumbotron text-center">
+    <h1>Register Today</h1>
+    <br>
     <p>
       <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
       <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
     </p>
-  <% end %>  
-</div>
+  </div>
+<% end %>
+
+
+
+
