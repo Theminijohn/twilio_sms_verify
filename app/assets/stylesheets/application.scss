@@ -1,0 +1,25 @@
+$body-bg:                    #fff;
+$font-family-sans-serif:     'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:              45px;
+$navbar-default-bg:          white;
+// $navbar-default-brand-color: #78b23f ;
+// $brand-primary:              #78b23f ;
+$jumbotron-bg:               white;
+
+$text-color:                 #59585b;
+
+// Default Container Width
+$grid-gutter-width: 20px;
+$container-large-desktop:  ((980px + $grid-gutter-width));
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'ionicons';
+
+
+body {
+  a:active, a:hover {
+    outline: 0;
+  }
+}
