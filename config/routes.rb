@@ -15,4 +15,7 @@ Rails.application.routes.draw do
       registrations: 'registrations'
     }
 
+  # incoming verfication code from twilio
+  post 'webhooks/incoming_verification' => 'webhooks#incoming_verification'
+
 end

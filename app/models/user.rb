@@ -5,11 +5,15 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 
+  # Validations
+  validates :phone_number, presence: true, uniqueness: true
+
   # Scopes
   scope :unverified_phones,  -> { where(phone_verified: false) }
 
   # Callbacks
   before_save :set_phone_attributes,            if: :phone_verification_needed?
+  before_save :number_syntax
   after_save  :send_sms_for_phone_verification, if: :phone_verification_needed?
 
   def mark_phone_as_verified!
@@ -40,6 +44,9 @@ private
 
   def phone_verification_needed?
     phone_number.present? && phone_number_changed?
+  end
+
+  def number_syntax
   end
 
 end

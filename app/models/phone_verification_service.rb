@@ -12,12 +12,12 @@ class PhoneVerificationService
 private
 
   def to
-    "#{user.phone_number}"
+    user.phone_number
   end
 
   def body
-    "Please reply with this code '#{user.phone_verification_code}' to
-    verify your phone number"
+    "Please reply with this code: '#{user.phone_verification_code}' to
+    verify your phone number."
   end
 
   def twilio_client

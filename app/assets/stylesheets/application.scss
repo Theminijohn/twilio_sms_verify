@@ -17,6 +17,8 @@ $container-large-desktop:  ((980px + $grid-gutter-width));
 @import 'font-awesome';
 @import 'ionicons';
 
+@import 'devise/*';
+
 
 body {
   a:active, a:hover {
