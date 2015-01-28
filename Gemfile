@@ -22,6 +22,9 @@ gem 'ionicons-rails'
 gem 'devise'
 gem 'rails_config'
 
+# Twilio
+gem 'twilio-ruby', '~> 3.12'
+
 group :development, :test do
   gem 'byebug'
   gem 'spring'
